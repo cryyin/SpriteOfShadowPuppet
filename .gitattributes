@@ -1,0 +1,5 @@
+“* filter=lfs diff=lfs merge=lfs -text
+.a”/Library/PlayerDataCache/Win64/Data/sharedassets0.resourgit filter=lfs diff=lfs merge=lfs -text
+lfs filter=lfs diff=lfs merge=lfs -text
+track filter=lfs diff=lfs merge=lfs -text
+“/Library/PlayerDataCache/Win64/Data/sharedassets0.resource“ filter=lfs diff=lfs merge=lfs -text
