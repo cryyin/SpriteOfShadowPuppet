@@ -683,8 +683,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoClips:
   - {fileID: 32900000, guid: 25a2fe5ab3e5fe24db892e26f851dcaa, type: 3}
-  - {fileID: 32900000, guid: 213b109d8e18fe748a75190ee7ec78d0, type: 3}
-  - {fileID: 32900000, guid: c4157486a3d8d1c49ac6555d450cd20e, type: 3}
+  - {fileID: 32900000, guid: 420ed979fd5388f45894310de7fc0244, type: 3}
+  - {fileID: 32900000, guid: ecfa382d6698d3a4d8ab6620b4d51816, type: 3}
   seaDialog: {fileID: 1330186683}
   skipDialog: {fileID: 706610341}
 --- !u!1 &706610341
@@ -1101,7 +1101,7 @@ GameObject:
   - component: {fileID: 1347293331}
   - component: {fileID: 1347293330}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: "\u5E55\u5E03\u5149"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

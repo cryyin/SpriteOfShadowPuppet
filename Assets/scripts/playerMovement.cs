@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class playerMovement : MonoBehaviour
@@ -148,7 +149,7 @@ public class playerMovement : MonoBehaviour
 
     void waitToGetUp()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && playerDown)
+        if ((Input.GetKeyDown(KeyCode.Q) && playerDown)|| SceneManager.GetActiveScene().name.Equals("scene2"))
         {
             playerDown = false;
             anim.SetBool("down", false);
