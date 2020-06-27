@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class play : MonoBehaviour
+public class play2 : MonoBehaviour
 {
     // Start is called before the first frame update
     private VideoPlayer videoPlayer;
@@ -16,7 +16,7 @@ public class play : MonoBehaviour
 
     void Start()
     {
-        skipDialog.SetActive(true);
+        skipDialog.SetActive(false);
         videoPlayer = this.GetComponent<VideoPlayer>();
         currentClipIndex = 0;
     }
@@ -30,28 +30,13 @@ public class play : MonoBehaviour
             //Debug.Log("您按下了S键"); 
             videoPlayer.Stop();
         }    
-        if (!videoPlayer.isPlaying && seaDialog.activeSelf && Input.GetKeyDown (KeyCode.E))    
+        if (!videoPlayer.isPlaying && Input.GetKeyDown (KeyCode.Z))    
         {
             skipDialog.SetActive(true);
-            currentClipIndex++;
-            currentClipIndex = currentClipIndex % videoClips.Length;
             videoPlayer.clip = videoClips[currentClipIndex];
             videoPlayer.Play();
             
         }
-        if (currentClipIndex == 1 && Input.GetKeyDown(KeyCode.Z))
-        {
-            Debug.Log("您按下了Z键"); 
-            skipDialog.SetActive(true);
-            currentClipIndex++;
-            currentClipIndex = currentClipIndex % videoClips.Length;
-            videoPlayer.clip = videoClips[currentClipIndex];
-            videoPlayer.Play();
-        }
-         if (!videoPlayer.isPlaying &&currentClipIndex==1)    
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-        }    
         if(Input.GetKeyDown(KeyCode.U))
         {
             Debug.Log("您按下了U键 "+currentClipIndex); 

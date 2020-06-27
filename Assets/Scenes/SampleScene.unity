@@ -683,8 +683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoClips:
   - {fileID: 32900000, guid: 25a2fe5ab3e5fe24db892e26f851dcaa, type: 3}
-  - {fileID: 32900000, guid: 420ed979fd5388f45894310de7fc0244, type: 3}
-  - {fileID: 32900000, guid: ecfa382d6698d3a4d8ab6620b4d51816, type: 3}
+  - {fileID: 32900000, guid: a8096a70f6106f5438c65395ee0fcda5, type: 3}
   seaDialog: {fileID: 1330186683}
   skipDialog: {fileID: 706610341}
 --- !u!1 &706610341
@@ -1085,7 +1084,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330186683}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99e69fc9ca027d1439db8fd1a5bc4497, type: 3}
   m_Name: 
