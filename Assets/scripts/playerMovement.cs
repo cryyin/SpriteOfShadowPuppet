@@ -25,6 +25,8 @@ public class playerMovement : MonoBehaviour
     private int jump_count;
     private bool guide;
 
+    public int questionAnswered=0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -215,4 +217,15 @@ public class playerMovement : MonoBehaviour
             anim.SetBool("", true);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)//遭遇图二的鸟，开始对话
+    {
+        if (collision.tag == "QandAspace")
+        {
+            //触发对话
+            questionAnswered++;
+        }
+    }
 }
+
+
