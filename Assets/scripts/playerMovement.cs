@@ -25,7 +25,8 @@ public class playerMovement : MonoBehaviour
     private bool jump_pressed;
     private int jump_count;
     private bool guide;
-
+    private float lastdir = 1;//之前人物朝向
+    private float tempdir = 1;//缓存人物朝向
     public int questionAnswered=0;
 
     // Start is called before the first frame update
@@ -97,8 +98,19 @@ public class playerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(facedir, 1, 1);
         }
-
-        
+        if (facedir * lastdir < 0)
+        {
+            tempdir = facedir;
+            anim.SetBool("turningleft", true);
+            
+        }
+        // 判断动画是否播放完成
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
+        {
+            //播放完毕，要执行的内容
+            lastdir = tempdir;
+            anim.SetBool("turningleft", false);
+        }
     }
 
     void playerJump()
