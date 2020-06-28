@@ -15,6 +15,7 @@ public class playerMovement : MonoBehaviour
     public LayerMask ground;
     public LayerMask boat;
     public LayerMask sea;
+    public LayerMask bird;
     public bool playerDown = true;
 
     public float speed, jumpForce;
@@ -87,7 +88,7 @@ public class playerMovement : MonoBehaviour
         
 
         //左右
-        if (coll.IsTouchingLayers(ground)|| coll.IsTouchingLayers(boat))
+        if (coll.IsTouchingLayers(ground)|| coll.IsTouchingLayers(boat) || coll.IsTouchingLayers(bird))
         {
             rb.velocity = new Vector2(facedir * speed, rb.velocity.y);
             anim.SetFloat("walking", Mathf.Abs(facedir));
@@ -103,7 +104,7 @@ public class playerMovement : MonoBehaviour
     void playerJump()
     {
         //跳
-        if (isGround)
+        if (isGround || coll.IsTouchingLayers(bird))
         {
             jump_count = 1;
             isJump = false;
@@ -136,7 +137,7 @@ public class playerMovement : MonoBehaviour
                 anim.SetBool("jumping", false);
                 anim.SetBool("falling", true);
             }
-        }else if (coll.IsTouchingLayers(ground)|| coll.IsTouchingLayers(boat))
+        }else if (coll.IsTouchingLayers(ground)|| coll.IsTouchingLayers(boat) || coll.IsTouchingLayers(bird))
         {
             anim.SetBool("falling", false);
             anim.SetBool("idle", true);
