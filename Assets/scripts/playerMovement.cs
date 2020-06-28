@@ -28,8 +28,12 @@ public class playerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        guide = true;
-        anim.SetBool("down", true);
+        if (SceneManager.GetActiveScene().name.Equals("Scene1"))//只在场景一显示提示
+        {
+            guide = true;
+            anim.SetBool("down", true);
+        }
+        
         rb=GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
@@ -149,7 +153,7 @@ public class playerMovement : MonoBehaviour
 
     void waitToGetUp()
     {
-        if ((Input.GetKeyDown(KeyCode.Q) && playerDown)|| SceneManager.GetActiveScene().name.Equals("scene2"))
+        if ((Input.GetKeyDown(KeyCode.Q) && playerDown)|| SceneManager.GetActiveScene().name.Equals("scene2"))//按了q或者在场景2，站起来
         {
             playerDown = false;
             anim.SetBool("down", false);
