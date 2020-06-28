@@ -298,15 +298,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3836914a546f4f4fb46835717ee0e70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  guideDialog: {fileID: 1727352069}
-  seaDialog: {fileID: 1980481063}
-  skipDialog: {fileID: 1871760147}
-=======
   guideDialog: {fileID: 2068235190}
   seaDialog: {fileID: 969065994}
   skipDialog: {fileID: 1433497151}
->>>>>>> fae6c71be4abf8fdfdecbfbd36dd0be30a48c1c0
   rb: {fileID: 176033100}
   coll: {fileID: 176033099}
   anim: {fileID: 176033097}
@@ -438,11 +432,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!1 &320476527
-=======
 --- !u!1 &321279676
->>>>>>> fae6c71be4abf8fdfdecbfbd36dd0be30a48c1c0
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -450,15 +440,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 320476528}
-  - component: {fileID: 320476530}
-  - component: {fileID: 320476529}
-=======
   - component: {fileID: 321279677}
   - component: {fileID: 321279679}
   - component: {fileID: 321279678}
->>>>>>> fae6c71be4abf8fdfdecbfbd36dd0be30a48c1c0
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
