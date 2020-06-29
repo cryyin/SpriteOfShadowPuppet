@@ -25,8 +25,8 @@ public class playerMovement : MonoBehaviour
     private bool jump_pressed;
     private int jump_count;
     private bool guide;
-    private float lastdir = 1;//之前人物朝向
-    private float tempdir = 1;//缓存人物朝向
+    public float lastdir = 1;//之前人物朝向
+    public bool play_re;
     public int questionAnswered=0;
 
     // Start is called before the first frame update
@@ -88,8 +88,26 @@ public class playerMovement : MonoBehaviour
         float facedir=Input.GetAxisRaw("Horizontal");
         
 
+        anim.SetFloat("last_now", facedir * lastdir);
+        if (facedir * lastdir < 0 )
+        {
+            anim.SetBool("turningleft", true);
+            play_re = true;
+        }
+        // 判断动画是否播放完成
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.turnleft")&&anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
+        {
+            //播放完毕，要执行的内容
+            anim.SetBool("turningleft", false);
+            play_re = false;
+        }
+        if (facedir!=0)
+        {
+            lastdir = facedir;
+        }
+
         //左右
-        if (coll.IsTouchingLayers(ground)|| coll.IsTouchingLayers(boat) || coll.IsTouchingLayers(bird))
+        if (coll.IsTouchingLayers(ground) || coll.IsTouchingLayers(boat) || coll.IsTouchingLayers(bird))
         {
             rb.velocity = new Vector2(facedir * speed, rb.velocity.y);
             anim.SetFloat("walking", Mathf.Abs(facedir));
@@ -97,19 +115,6 @@ public class playerMovement : MonoBehaviour
         if (facedir != 0)
         {
             transform.localScale = new Vector3(facedir, 1, 1);
-        }
-        if (facedir * lastdir < 0)
-        {
-            tempdir = facedir;
-            anim.SetBool("turningleft", true);
-            
-        }
-        // 判断动画是否播放完成
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
-        {
-            //播放完毕，要执行的内容
-            lastdir = tempdir;
-            anim.SetBool("turningleft", false);
         }
     }
 
