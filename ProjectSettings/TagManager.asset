@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sea
+<<<<<<< HEAD
+=======
+  - QandAspace
+  - Bird
+>>>>>>> dev
   layers:
   - Default
   - TransparentFX
@@ -18,7 +23,11 @@ TagManager:
   - sea
   - boat
   - seaCheck
+<<<<<<< HEAD
   - 
+=======
+  - bird
+>>>>>>> dev
   - 
   - 
   - 

@@ -683,8 +683,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoClips:
   - {fileID: 32900000, guid: 25a2fe5ab3e5fe24db892e26f851dcaa, type: 3}
+<<<<<<< HEAD
   - {fileID: 32900000, guid: 213b109d8e18fe748a75190ee7ec78d0, type: 3}
   - {fileID: 32900000, guid: c4157486a3d8d1c49ac6555d450cd20e, type: 3}
+=======
+  - {fileID: 32900000, guid: a8096a70f6106f5438c65395ee0fcda5, type: 3}
+>>>>>>> dev
   seaDialog: {fileID: 1330186683}
   skipDialog: {fileID: 706610341}
 --- !u!1 &706610341
@@ -995,6 +999,10 @@ GameObject:
   - component: {fileID: 1330186686}
   - component: {fileID: 1330186685}
   - component: {fileID: 1330186687}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 1330186688}
+>>>>>>> dev
   m_Layer: 5
   m_Name: BoatInSeaDialog
   m_TagString: Untagged
@@ -1077,6 +1085,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+<<<<<<< HEAD
+=======
+--- !u!114 &1330186688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330186683}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e69fc9ca027d1439db8fd1a5bc4497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> dev
 --- !u!1 &1347293329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1111,11 @@ GameObject:
   - component: {fileID: 1347293331}
   - component: {fileID: 1347293330}
   m_Layer: 0
+<<<<<<< HEAD
   m_Name: Point Light
+=======
+  m_Name: "\u5E55\u5E03\u5149"
+>>>>>>> dev
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1107,7 +1134,11 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.990566, g: 0.8911066, b: 0.6681648, a: 1}
   m_Intensity: 1
+<<<<<<< HEAD
   m_Range: 20
+=======
+  m_Range: 80
+>>>>>>> dev
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1163,7 +1194,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1347293329}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0, y: 0, z: -2}
+=======
+  m_LocalPosition: {x: 0, y: 0, z: -2.33}
+>>>>>>> dev
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1372,11 +1407,21 @@ MonoBehaviour:
   sea:
     serializedVersion: 2
     m_Bits: 2560
+<<<<<<< HEAD
+=======
+  bird:
+    serializedVersion: 2
+    m_Bits: 0
+>>>>>>> dev
   playerDown: 1
   speed: 5
   jumpForce: 8
   isGround: 0
   isJump: 0
+<<<<<<< HEAD
+=======
+  questionAnswered: 0
+>>>>>>> dev
 --- !u!61 &1691860309
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1394,7 +1439,11 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
     oldSize: {x: 2.92, y: 6.08}
+=======
+    oldSize: {x: 11.34, y: 6.08}
+>>>>>>> dev
     newSize: {x: 1.15, y: 4.9}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

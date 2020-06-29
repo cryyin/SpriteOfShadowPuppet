@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
+<<<<<<< HEAD
+=======
+using UnityEngine.SceneManagement;
+>>>>>>> dev
 public class play : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -36,14 +40,33 @@ public class play : MonoBehaviour
             currentClipIndex = currentClipIndex % videoClips.Length;
             videoPlayer.clip = videoClips[currentClipIndex];
             videoPlayer.Play();
+<<<<<<< HEAD
         }
         if (currentClipIndex == 1 && Input.GetKeyDown(KeyCode.S))
         {
+=======
+            
+        }
+        if (currentClipIndex == 1 && Input.GetKeyDown(KeyCode.Z))
+        {
+            Debug.Log("您按下了Z键"); 
+>>>>>>> dev
             skipDialog.SetActive(true);
             currentClipIndex++;
             currentClipIndex = currentClipIndex % videoClips.Length;
             videoPlayer.clip = videoClips[currentClipIndex];
             videoPlayer.Play();
         }
+<<<<<<< HEAD
+=======
+         if (!videoPlayer.isPlaying &&currentClipIndex==1)    
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        }    
+        if(Input.GetKeyDown(KeyCode.U))
+        {
+            Debug.Log("您按下了U键 "+currentClipIndex); 
+        }
+>>>>>>> dev
     }
 }
