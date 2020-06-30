@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using static RPGTalk;
 
 public class playerMovement : MonoBehaviour
 {

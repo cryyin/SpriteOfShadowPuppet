@@ -2079,7 +2079,7 @@ MonoBehaviour:
   button: {fileID: 1042906008}
   talkUI: {fileID: 2317948198920387339}
   anim: {fileID: 176033097}
-  rpgtalk: {fileID: 0}
+  rpgtalk: {fileID: 2317948198554673154, guid: 24c0fc9553a4b4d41817f4b736c796ad, type: 3}
   choiceNumber: 0
 --- !u!50 &1491379966
 Rigidbody2D:
@@ -3251,7 +3251,18 @@ MonoBehaviour:
   enableQuickSkip: 0
   callback:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 57c02ef0f0c8946d992841ee7416e7e9, type: 3}
+        m_MethodName: 
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   animatorWhenTalking: {fileID: 0}
   actualAnimator: {fileID: 0}
   animatorBooleanName: talking
