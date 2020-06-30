@@ -1,9 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-<<<<<<< HEAD
-=======
 using UnityEngine.SceneManagement;
->>>>>>> dev
 using UnityEngine;
 
 public class playerMovement : MonoBehaviour
@@ -18,10 +15,7 @@ public class playerMovement : MonoBehaviour
     public LayerMask ground;
     public LayerMask boat;
     public LayerMask sea;
-<<<<<<< HEAD
-=======
     public LayerMask bird;
->>>>>>> dev
     public bool playerDown = true;
 
     public float speed, jumpForce;
@@ -31,27 +25,19 @@ public class playerMovement : MonoBehaviour
     private bool jump_pressed;
     private int jump_count;
     private bool guide;
-<<<<<<< HEAD
-=======
     public float lastdir = 1;//之前人物朝向
     public bool play_re;
     public int questionAnswered=0;
->>>>>>> dev
 
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< HEAD
-        guide = true;
-        anim.SetBool("down", true);
-=======
-        if (SceneManager.GetActiveScene().name.Equals("Scene1"))//只在场景一显示提示
+        if (SceneManager.GetActiveScene().name.Equals("SampleScene"))//只在场景一显示提示
         {
             guide = true;
             anim.SetBool("down", true);
         }
         
->>>>>>> dev
         rb=GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
@@ -102,10 +88,6 @@ public class playerMovement : MonoBehaviour
         float facedir=Input.GetAxisRaw("Horizontal");
         
 
-<<<<<<< HEAD
-        //左右
-        if (coll.IsTouchingLayers(ground)|| coll.IsTouchingLayers(boat))
-=======
         anim.SetFloat("last_now", facedir * lastdir);
         if (facedir * lastdir < 0 )
         {
@@ -126,7 +108,6 @@ public class playerMovement : MonoBehaviour
 
         //左右
         if (coll.IsTouchingLayers(ground) || coll.IsTouchingLayers(boat) || coll.IsTouchingLayers(bird))
->>>>>>> dev
         {
             rb.velocity = new Vector2(facedir * speed, rb.velocity.y);
             anim.SetFloat("walking", Mathf.Abs(facedir));
@@ -135,21 +116,12 @@ public class playerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(facedir, 1, 1);
         }
-<<<<<<< HEAD
-
-        
-=======
->>>>>>> dev
     }
 
     void playerJump()
     {
         //跳
-<<<<<<< HEAD
-        if (isGround)
-=======
         if (isGround || coll.IsTouchingLayers(bird))
->>>>>>> dev
         {
             jump_count = 1;
             isJump = false;
@@ -182,11 +154,7 @@ public class playerMovement : MonoBehaviour
                 anim.SetBool("jumping", false);
                 anim.SetBool("falling", true);
             }
-<<<<<<< HEAD
-        }else if (coll.IsTouchingLayers(ground)|| coll.IsTouchingLayers(boat))
-=======
         }else if (coll.IsTouchingLayers(ground)|| coll.IsTouchingLayers(boat) || coll.IsTouchingLayers(bird))
->>>>>>> dev
         {
             anim.SetBool("falling", false);
             anim.SetBool("idle", true);
@@ -205,11 +173,7 @@ public class playerMovement : MonoBehaviour
 
     void waitToGetUp()
     {
-<<<<<<< HEAD
-        if (Input.GetKeyDown(KeyCode.Q) && playerDown)
-=======
         if ((Input.GetKeyDown(KeyCode.Q) && playerDown)|| SceneManager.GetActiveScene().name.Equals("scene2"))//按了q或者在场景2，站起来
->>>>>>> dev
         {
             playerDown = false;
             anim.SetBool("down", false);
@@ -271,9 +235,6 @@ public class playerMovement : MonoBehaviour
             anim.SetBool("", true);
         }
     }
-<<<<<<< HEAD
-}
-=======
 
     private void OnTriggerEnter2D(Collider2D collision)//遭遇图二的鸟，开始对话
     {
@@ -286,4 +247,3 @@ public class playerMovement : MonoBehaviour
 }
 
 
->>>>>>> dev

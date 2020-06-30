@@ -7,10 +7,12 @@ public class fly : MonoBehaviour
 
    // Start is called before the first frame update
     public float speed;
+    public Animator anim;
     //private Rigidbody2D bird;
     private GameObject[] array;
     private Rigidbody2D[] rigid=new Rigidbody2D[7];
     private bool run=false;
+
     void Start()
     {
         array= GameObject.FindGameObjectsWithTag("Bird");
@@ -29,7 +31,7 @@ public class fly : MonoBehaviour
     }
     void move()
     {
-        if(Input.GetKeyDown(KeyCode.F))
+        if(anim.GetBool("fly"))
         {
            
            run=true;
@@ -37,13 +39,13 @@ public class fly : MonoBehaviour
         } 
         if(run)
         {
-            Debug.Log("按F");
+            // Debug.Log("按F");
             for(int i=0;i<7;++i)
             {
                 Debug.Log(i+" "+array[i].transform.position.y);
                 if(array[i].transform.position.y>=i-5)
                 {
-                    Debug.Log("循环");
+                    // Debug.Log("循环");
                     rigid[i].velocity=Vector2.zero;
                     Debug.Log(rigid[i].velocity.y);
                 }
