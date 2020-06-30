@@ -531,7 +531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176033096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.06, y: -1.93, z: 0}
+  m_LocalPosition: {x: -16.35, y: -3.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1895347916}
@@ -1846,9 +1846,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoClips:
+  - {fileID: 32900000, guid: 279387c623aedd94b869cc431fbbd597, type: 3}
   - {fileID: 32900000, guid: 41d9816676012904a9fd3729156f7bb1, type: 3}
   seaDialog: {fileID: 969065994}
   skipDialog: {fileID: 1433497151}
+  player: {fileID: 176033100}
 --- !u!328 &1414309651
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -1857,7 +1859,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414309649}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 41d9816676012904a9fd3729156f7bb1, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 279387c623aedd94b869cc431fbbd597, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 575876173}

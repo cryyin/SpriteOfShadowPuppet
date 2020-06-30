@@ -47,13 +47,13 @@ public class fly : MonoBehaviour
                 {
                     // Debug.Log("循环");
                     rigid[i].velocity=Vector2.zero;
-                    Debug.Log(rigid[i].velocity.y);
+                    //Debug.Log(rigid[i].velocity.y);
                 }
                 else
                 {
                     //Debug.Log("循环");
                     rigid[i].velocity=new Vector2(rigid[i].velocity.x,speed);
-                    Debug.Log(rigid[i].velocity.y);
+                    //Debug.Log(rigid[i].velocity.y);
                 }
                 
             }         
