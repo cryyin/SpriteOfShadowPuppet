@@ -12,6 +12,7 @@ public class Bird : MonoBehaviour
 
     private void Start()
     {
+
     }
 
     private void Update()

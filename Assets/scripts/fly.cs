@@ -30,7 +30,6 @@ public class fly : MonoBehaviour
     }
     void move()
     {
-
         if (Choice.choice == 0)
         {
 

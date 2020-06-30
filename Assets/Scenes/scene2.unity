@@ -1846,9 +1846,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoClips:
+  - {fileID: 32900000, guid: 279387c623aedd94b869cc431fbbd597, type: 3}
   - {fileID: 32900000, guid: 41d9816676012904a9fd3729156f7bb1, type: 3}
   seaDialog: {fileID: 969065994}
   skipDialog: {fileID: 1433497151}
+  player: {fileID: 176033100}
 --- !u!328 &1414309651
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -1857,7 +1859,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414309649}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 41d9816676012904a9fd3729156f7bb1, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 279387c623aedd94b869cc431fbbd597, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 575876173}
@@ -2079,7 +2081,6 @@ MonoBehaviour:
   button: {fileID: 1042906008}
   talkUI: {fileID: 2317948198920387339}
   anim: {fileID: 176033097}
-  rpgtalk: {fileID: 0}
   choiceNumber: 0
 --- !u!50 &1491379966
 Rigidbody2D:
