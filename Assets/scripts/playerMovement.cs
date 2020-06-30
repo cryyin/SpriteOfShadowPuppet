@@ -32,7 +32,7 @@ public class playerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (SceneManager.GetActiveScene().name.Equals("Scene1"))//只在场景一显示提示
+        if (SceneManager.GetActiveScene().name.Equals("SampleScene"))//只在场景一显示提示
         {
             guide = true;
             anim.SetBool("down", true);
