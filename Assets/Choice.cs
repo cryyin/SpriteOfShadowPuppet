@@ -1,24 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static RPGTalk;
 public class Choice : MonoBehaviour
 {
-    public string questionID;
+    public static int choice = 999;
     public int choiceID;
-    public RPGTalk rpgtalk;
-    // Start is called before the first frame update
-    void Start()
-    {
-        rpgtalk.OnMadeChoice += OnMadeChoice;
-    }
+    public Transform transform;
 
     private void Update()
     {
-        
+        choiceID = transform.GetSiblingIndex();
     }
-    void OnMadeChoice(string questionID, int choiceID)
+    public void OnClick()
     {
-        Debug.Log("Aha! In the question " + questionID + " you choosed the option " + choiceID);
+        if (choiceID == 0)
+        {
+            choice = 0;
+        }
     }
 }
